@@ -152,7 +152,7 @@ Overview captures broader thematic context.
 
 Taglines provide limited discriminative power.
 
-Task 5 – Frequent Words per Genre
+# Task 5 – Frequent Words per Genre
 
 For each genre:
 
