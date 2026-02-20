@@ -1,5 +1,5 @@
 # DeepLearning_Lab
-Movie Text Modeling with GloVe Embeddings
+# Movie Text Modeling with GloVe Embeddings
 
 Name: Samay Kharidia
 Student ID: 202301433
@@ -32,7 +32,7 @@ vote_average
 
 Only these allowed columns were retained for modeling.
 
-Task 1 – Data Preparation
+# Task 1 – Data Preparation
 Preprocessing Steps
 
 Convert text to lowercase
@@ -59,7 +59,7 @@ Reproducible split (random_state=42):
 
 15% Test
 
-Task 2 – GloVe Embedding Pipeline
+# Task 2 – GloVe Embedding Pipeline
 Pretrained Embeddings Used
 
 GloVe 100-dimensional vectors (glove.6B.100d.txt)
@@ -77,45 +77,7 @@ unique tokens found in GloVe
 	​
 
 
-Reported Coverage: XX.X%
-
-Document Embedding Method
-
-For each document:
-
-DocEmbedding
-=
-∑
-𝑇
-𝐹
-𝐼
-𝐷
-𝐹
-(
-𝑤
-)
-⋅
-𝐺
-𝑙
-𝑜
-𝑉
-𝑒
-(
-𝑤
-)
-∑
-𝑇
-𝐹
-𝐼
-𝐷
-𝐹
-(
-𝑤
-)
-DocEmbedding=
-∑TFIDF(w)
-∑TFIDF(w)⋅GloVe(w)
-	​
+Reported Coverage: XX.X%​
 
 
 TF-IDF fitted on training data
@@ -124,7 +86,7 @@ Weighted average of word vectors
 
 Output dimension = 100
 
-Task 3 – Model A: Rating Prediction (Regression)
+# Task 3 – Model A: Rating Prediction (Regression)
 Objective
 
 Predict vote_average using document embeddings.
@@ -153,13 +115,6 @@ Baseline
 
 Predict global mean rating from training set.
 
-Results Comparison
-Input Column	MSE	RMSE
-Overview	XX.XX	X.XX
-Tagline	XX.XX	X.XX
-Keywords	XX.XX	X.XX
-Baseline	XX.XX	X.XX
-Observation
 
 Overview typically performs best due to richer semantic content.
 
@@ -167,7 +122,7 @@ Tagline often underperforms due to short length.
 
 Keywords may improve genre-specific prediction.
 
-Task 4 – Model B: Genre Prediction (Multi-Label Classification)
+# Task 4 – Model B: Genre Prediction (Multi-Label Classification)
 Setup
 
 Multi-hot encoding for genres
@@ -190,12 +145,6 @@ Hamming Loss
 
 Jaccard Score
 
-Results Comparison
-Input Column	Micro-F1	Macro-F1	Jaccard	Hamming
-Overview	0.XX	0.XX	0.XX	0.XX
-Keywords	0.XX	0.XX	0.XX	0.XX
-Tagline	0.XX	0.XX	0.XX	0.XX
-Observation
 
 Keywords often perform best for genre prediction.
 
@@ -238,7 +187,7 @@ rescue
 Interpretation:
 Action films emphasize conflict, combat, and high-intensity themes.
 
-Task 6 – Genre-Indicative Words (TF-IDF + Logistic Regression)
+# Task 6 – Genre-Indicative Words (TF-IDF + Logistic Regression)
 
 Method:
 
